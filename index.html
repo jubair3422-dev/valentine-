@@ -164,11 +164,74 @@ setTimeout(()=>h.remove(),5000);
 @keyframes fall{
 to{transform:translateY(100vh);}
 }
-</style></body>
-</html>I have a small surprise for you 🫶🏼
-I made it only for you...
-I hope it makes you smile.
-<h2>A small gift for you ❤️</h2>
-<video width="300" controls>
-  <source src="video.mp4" type="video/mp4">
-</video>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      background:black;
+      color:white;
+      font-family: Arial, sans-serif;
+      text-align:center;
+      overflow-x:hidden;
+    }
+
+    h2{
+      margin-top:30px;
+      color:#ff4d6d;
+    }
+
+    p{
+      font-size:18px;
+      line-height:1.5;
+    }
+
+    video{
+      margin-top:15px;
+      border:2px solid #ff4d6d;
+      border-radius:10px;
+    }
+
+    @keyframes fall{
+      to{ transform: translateY(100vh); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>I have a small surprise for you 🙈</h2>
+  <p>
+    I made it only for you...<br>
+    I hope it makes you smile 💖
+  </p>
+
+  <h2>A small gift for you ❤️</h2>
+
+  <video width="300" controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    // falling hearts
+    setInterval(()=>{
+      let h=document.createElement("div");
+      h.innerHTML="❤️";
+      h.style.position="fixed";
+      h.style.left=Math.random()*100+"vw";
+      h.style.top="-10px";
+      h.style.fontSize="24px";
+      h.style.animation="fall 5s linear";
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(),5000);
+    },400);
+  </script>
+
+</body>
+</html>
